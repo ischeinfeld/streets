@@ -1,0 +1,32 @@
+f = open("streets128D.emb")
+x = []
+y = []
+N = 24
+ids = []
+vecs = {}
+import random
+import numpy as np
+import matplotlib.pyplot as plt
+for line in f:
+    if len(line.split(" ")) <= 2:
+        continue
+    id, vec = line.split(" ")[0], line.split(" ")[1:]
+    vec = np.array(map(float,vec)).astype(float)
+    ids.append(id)
+    vecs[id] =vec 
+    x.append(vec[0])
+    y.append(vec[1])
+
+plt.scatter(x,y,c="red")
+plt.show()
+
+rand = random.choice(ids)
+print(rand)
+sims = []
+for vec in vecs:
+    print(vecs[rand])
+    top = vecs[rand].dot(vecs[vec]) 
+    bottom = (np.linalg.norm(vecs[vec]) * np.linalg.norm(vecs[rand]))
+    sims.append(top/bottom)
+plt.hist(sims)
+plt.show()
