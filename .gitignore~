@@ -108,6 +108,3 @@ venv.bak/
 
 # embeddings
 *.emb
-
-.DS_Store
-
