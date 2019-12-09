@@ -2,16 +2,19 @@
 CS224W Project
 
 Structure
-- /data/movement_data/quarterly - raw zipped quarterly Uber data
-- /data/movement_data/hourly - raw zipped hourly Uber data
-- /data/boeing_dataverse/states/
+- /data
+  - /movement_data/quarterly - raw zipped quarterly Uber data
+  - /movement_data/hourly - raw zipped hourly Uber data
+  - /boeing_dataverse/states/
 
 - /experiments
-  - /preprocessed - graphML formatted network's with target data
-    - /speed85/san_fransisco.graphml - networks with target speed85
-    - /other_target - ...
+  - /graphs - graphML formatted street networks with target data
+    - /speed85/san_fransisco.graphml
+  - /line_graphs - graphML formatted line graph with target data
+    - /speed85/san_fransisco.graphml
   - /embeddings
     - /basic - just available edge features
+      - /san_fransisco.graphml
     - /recursive - with RoleX feature
     - /node2vec - ...
     - /other_embeddings - ...
