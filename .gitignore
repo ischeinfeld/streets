@@ -112,5 +112,7 @@ venv.bak/
 .DS_Store
 
 # cache
-/cache
-/experiments
+cache/
+experiments/*
+!experiments/line_graphs
+!experiments/graphs
